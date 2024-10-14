@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  h1 {
+    color: red;
+    font-size: 48px;
+    margin-bottom: 10px;
+    border: red 1px solid;
+    border-radius: 40px;
+    padding: 20px;
+  }
+  
+  p {
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+  
+  .btn-entrar {
+    background-color: red;
+    color: white;
+    border: none;
+    width: 200px; /* Defina a largura fixa */
+    height: 100px; /* Defina a altura fixa */
+    font-size: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+  
+  .btn-entrar:hover {
+    background-color: darkred;
+  }
+
+  @media (max-width: 600px) {
+    .btn-entrar {
+      width: 70%;
+      height: 70px;
+      font-size: 20px ;
+    }
+  }
+  
