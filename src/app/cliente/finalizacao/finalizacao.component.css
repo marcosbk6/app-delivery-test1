@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: #f3f0f0;
+  padding: 20px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.mensagem_um {
+  background-color: #ff0000;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.mensagem_dois {
+  text-align: center;
+  font-size: 16px;
+  color: #000000;
+  margin-top: 100px;
+}
+
+.mensagem_tres {
+  text-align: center;
+  color: #ff0000;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+

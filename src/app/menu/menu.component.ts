@@ -15,7 +15,8 @@ export class MenuComponent {
     console.log(`${role} button clicked`);
     if (role === 'Gestor') {
       this.router.navigate(['/gestao']);
-    } else {
+    } else if ( role=== 'Cliente') {
+      this.router.navigate(['/cardapio']);
       // Lógica para outros botões
     }
   }

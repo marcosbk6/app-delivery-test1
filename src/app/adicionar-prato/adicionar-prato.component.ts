@@ -31,30 +31,39 @@ export class AdicionarPratoComponent {
       };
 
       reader.readAsDataURL(file); // Lê o arquivo como URL
+    } else {
+      // Verifique se o usuário colou uma URL
+      const pastedUrl = fileInput.value;
+      if (pastedUrl) {
+          this.imagemPreview = pastedUrl; // Mostra a imagem como preview
+          this.imagemUrl = pastedUrl.replace(/\[.*?\]/, ""); // Remove os caracteres indesejados, se necessário
+      }
     }
   }
 
   constructor(private http: HttpClient) {}
 
-   onSubmit() {
+  onSubmit() {
     const formData = new FormData();
     formData.append('nomePrato', this.nomePrato);
     formData.append('preco', this.preco !== null ? this.preco.toString() : '0');
-    // Aqui você precisa enviar o arquivo da imagem também
 
     const fileInput = document.getElementById('imagem') as HTMLInputElement;
     if (fileInput.files && fileInput.files.length > 0) {
-      formData.append('imagem', fileInput.files[0]);
+        formData.append('imagem', fileInput.files[0]); // Aqui você adiciona o arquivo da imagem
+    } else {
+        console.error('Nenhum arquivo de imagem selecionado.');
+        return; // Opcional: retorne se não houver arquivo de imagem
     }
 
     this.http.post('http://localhost:8080/api/pratos', formData).subscribe(
-      response => {
-        console.log('Prato adicionado com sucesso:', response);
-      },
-      error => {
-        console.error('Erro ao adicionar prato:', error);
-      }
+        response => {
+            console.log('Prato adicionado com sucesso:', response);
+        },
+        error => {
+            console.error('Erro ao adicionar prato:', error);
+        }
     );
-  }
+}
 
 }
