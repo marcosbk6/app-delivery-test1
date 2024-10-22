@@ -14,9 +14,14 @@ import { PratoService } from '../../services/prato.service';
   providers: [PratoService]
 })
 export class CardapioComponent implements OnInit {
-  selectedTab: string = 'hamburguer';
+  selectedTab: string = 'principais';
   pratos: any[] = [];
+  bebidas: any[] = [];
+  sobremesas: any [] = [];
   carrinho: string[] = [];
+  pratosPrincipais: any[] = []; 
+  pratosBebidas: any[] = []; 
+  pratosSobremesas: any[] = []; 
 
   constructor(private pratoService: PratoService, private router: Router, private location: Location) {}
 
@@ -24,6 +29,11 @@ export class CardapioComponent implements OnInit {
     this.pratoService.getPratos().subscribe(
       (data) => {
         this.pratos = data;
+        this.pratosPrincipais = this.pratos.filter(prato => prato.categoria === 'principal');
+        this.pratosBebidas = this.pratos.filter(prato => prato.categoria === 'bebidas');
+        this.pratosSobremesas = this.pratos.filter(prato => prato.categoria === 'sobremesas');
+        console.log('Pratos carregados:', this.pratos); // Verifique a estrutura aqui
+
       },
       (error) => {
         console.error('Erro ao buscar pratos:', error);

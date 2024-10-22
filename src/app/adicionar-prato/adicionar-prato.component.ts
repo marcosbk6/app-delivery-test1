@@ -17,9 +17,13 @@ export class AdicionarPratoComponent {
   preco: number | null = null;
   imagemUrl: string | null = null; // URL da imagem
   imagemPreview: string | null = null; // URL da imagem para visualização
-  categoria: string = 'prato';
-  categorias: string[] = ['prato', 'bebida', 'sobremesa'];
+  categoria: string = 'principal';
+  categorias: string[] = ['principal', 'bebida', 'sobremesa'];
   mensagem: string | null = null; // Mensagem de feedback
+  pratos: any[] = []; // Adicione esta linha
+  pratosPrincipais: any[] = []; // Adicione esta linha
+  pratosBebidas: any[] = []; // Adicione esta linha
+  pratosSobremesas: any[] = []; // Adicione esta linha
   
 
   onImageSelected(event: Event): void {
@@ -69,16 +73,33 @@ export class AdicionarPratoComponent {
             console.log('Prato adicionado com sucesso:', response);
             this.mensagem = 'Prato adicionado com sucesso!'; // Mensagem de sucesso
             this.resetForm();
+            this.getPratos();
         },
         error => {
             console.error('Erro ao adicionar prato:', error);
         }
     );
 }
+private getPratos() {
+  this.http.get<any[]>('http://localhost:8080/api/pratos').subscribe(
+      pratos => {
+          this.pratos = pratos;
+          this.pratosPrincipais = pratos.filter(prato => prato.categoria === 'principal');
+          this.pratosBebidas = pratos.filter(prato => prato.categoria === 'bebida');
+          this.pratosSobremesas = pratos.filter(prato => prato.categoria === 'sobremesa');
+      },
+      error => {
+          console.error('Erro ao buscar pratos:', error);
+      }
+    );
+  }
+    
     private resetForm() {
       this.nomePrato = '';
       this.preco = null;
       this.imagemPreview = null;
-      this.categoria = 'hamburguer';
+      this.categoria = 'principal';
     }
+
+    
 }

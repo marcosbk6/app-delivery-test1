@@ -22,16 +22,20 @@
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 
 }
 
 .botao_produto button {
-  width: 100%;
+  width: auto;
+  flex: 1;
+  max-width: 150px;
   background-color: #ccc;
   border: 1px solid;
   padding: 10px 15px;
   cursor: pointer;
   font-size: 16px;
+  margin: 0 5px;
 }
 
 .botao_produto button.active {
@@ -45,15 +49,23 @@
   background-color: #008000;
   color: #ffffff;
   border: none;
-  padding: 8px 15px;
-  font-size: 16px;
+  padding: 10px 15px;
+  font-size: 14px;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+  width: 100%;
 }
 
 .botao_adicionar:hover {
   background-color: #28a745;
+}
+
+.cardapio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 4 colunas */
+  gap: 15px;
+  padding: 20px; /* Espaço entre os pratos */
 }
 
 @media (min-width: 768px) {
@@ -81,13 +93,6 @@
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.cardapio-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 4 colunas */
-  gap: px;
-  padding: 20px; /* Espaço entre os pratos */
 }
 
 .prato {

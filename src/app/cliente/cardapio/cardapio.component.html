@@ -4,33 +4,43 @@
     <img src="images/casa-menu.png" alt="casinha menu">
   </div>
   <div class="botao_produto">
-    <button [class.active]="selectedTab === 'hamburguer'" (click)="selectedTab = 'hamburguer'">Hamburguer</button>
+    <button [class.active]="selectedTab === 'principais'" (click)="selectedTab = 'principais'">Pratos</button>
     <button [class.active]="selectedTab === 'bebidas'" (click)="selectedTab = 'bebidas'">Bebidas</button>
     <button [class.active]="selectedTab === 'sobremesas'" (click)="selectedTab = 'sobremesas'">Sobremesas</button>
   </div>
 
   <div class="cardapio-container">
-    <div class="prato" *ngFor="let prato of pratos">
-      <img class= "img-produto" [src]="getImagemUrl(prato.imagemUrl)"  alt="{{ prato.nome }}">
-      <h3>{{ prato.nome }}</h3>
-      <p>R$ {{ prato.preco | currency }}</p>
-      <button class="botao_adicionar" (click)="adicionarProduto(prato.nome)">Adicionar ao carrinho</button>
-    </div>
+    <!-- Renderização de pratos principais -->
+    <ng-container *ngIf="selectedTab === 'principais'">
+      <div class="prato" *ngFor="let prato of pratosPrincipais">
+        <img class="img-produto" [src]="getImagemUrl(prato.imagemUrl)" alt="{{ prato.nome }}">
+        <h3>{{ prato.nome }}</h3>
+        <p>R$ {{ prato.preco | currency }}</p>
+        <button class="botao_adicionar" (click)="adicionarProduto(prato.nome)">Adicionar ao carrinho</button>
+      </div>
+    </ng-container>
 
-    <div *ngIf="selectedTab === 'bebidas'" class="card">
-      <img src="images/bebidas.png" alt="Bebida" class="imagem">
-      <h3 class="nome_produto">Coca-cola</h3>
-      <p class="preco">R$ 8,00</p>
-      <button class="botao_adicionar" (click)="adicionarProduto('Coca-cola')">Adicionar</button>
-    </div>
+    <!-- Renderização de bebidas -->
+    <ng-container *ngIf="selectedTab === 'bebidas'">
+      <div class="prato" *ngFor="let prato of pratosBebidas">
+        <img class="img-produto" [src]="getImagemUrl(prato.imagemUrl)" alt="{{ prato.nome }}">
+        <h3>{{ prato.nome }}</h3>
+        <p>R$ {{ prato.preco | currency }}</p>
+        <button class="botao_adicionar" (click)="adicionarProduto(prato.nome)">Adicionar ao carrinho</button>
+      </div>
+    </ng-container>
 
-    <div *ngIf="selectedTab === 'sobremesas'" class="card">
-      <img src="images/sobremesa.png" alt="Sobremesa" class="imagem">
-      <h3 class="nome_produto">Pudim</h3>
-      <p class="preco">R$ 12,50</p>
-      <button class="botao_adicionar" (click)="adicionarProduto('Sorvete')">Adicionar</button>
-    </div>
+    <!-- Renderização de sobremesas -->
+    <ng-container *ngIf="selectedTab === 'sobremesas'">
+      <div class="prato" *ngFor="let prato of pratosSobremesas">
+        <img class="img-produto" [src]="getImagemUrl(prato.imagemUrl)" alt="{{ prato.nome }}">
+        <h3>{{ prato.nome }}</h3>
+        <p>R$ {{ prato.preco | currency }}</p>
+        <button class="botao_adicionar" (click)="adicionarProduto(prato.nome)">Adicionar ao carrinho</button>
+      </div>
+    </ng-container>
   </div>
+
 
 
   <div class="carrinho" (click)="irParaPedido()">
