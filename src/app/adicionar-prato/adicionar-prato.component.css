@@ -1,0 +1,32 @@
+.adicionar-prato-container {
+    padding: 20px;
+}
+
+.adicionar-prato-container h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.btn-adicionar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-adicionar:hover {
+    background-color: #218838;
+}
+
+

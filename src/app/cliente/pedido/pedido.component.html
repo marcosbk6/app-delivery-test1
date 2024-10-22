@@ -1,0 +1,20 @@
+<div class="pedido-container">
+  <div class="header">
+    <img src="images/seta-voltar.png" alt="seta voltar" (click)="voltarPaginaAnterior()">
+    <img src="images/casa-menu.png" alt="casinha menu">
+  </div>
+  <div class="pedido">
+     Pedido
+  </div>
+  <div class="pedido-detalhes">
+    <p>1x Hamburguer Clássico: R$ 15,99</p>
+    <p>1x Refrigerante: R$ 8,00</p>
+    <p>1x Pudim: R$ 12,50</p>
+    <p><strong>Total: R$ 36,49</strong></p>
+  </div>
+  <div class="pedido-botoes">
+    <button class="botao_finalizar" (click)="finalizarPedido()">Finalizar Pedido</button>
+    <button class="botao_cancelar" (click)="cancelarPedido()">Cancelar Pedido</button>
+  </div>
+</div>
+

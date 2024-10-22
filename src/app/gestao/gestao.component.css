@@ -1,0 +1,59 @@
+.gestao-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.gestao-icon {
+    position: absolute;
+    top: 30px; 
+    left: 30px; 
+    font-size: 44px; 
+    color: #000; 
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 48px;
+    color: red;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 24px;
+}
+
+.btn-gestao {
+    background-color: red; /* Cor do botão */
+    color: white;
+    border: none;
+    width: 90%;
+    max-width: 300px;
+    height: 100px;
+    font-size: 40px;
+    border-radius: 30px;
+    margin: 10px; /* Espaçamento entre os botões */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-gestao:hover {
+    background-color: darkgreen; /* Cor do botão ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .btn-gestao {
+        height: 70px;
+        font-size: 20px;
+    }
+}

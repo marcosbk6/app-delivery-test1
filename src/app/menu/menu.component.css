@@ -1,0 +1,44 @@
+.menu {
+    display: flex;                /* Usar Flexbox para layout */
+    flex-direction: column;      /* Colocar os elementos em coluna */
+    justify-content: center;      /* Centralizar verticalmente */
+    align-items: center;         /* Centralizar horizontalmente */
+    height: 100vh;              /* Altura total da viewport */
+}
+
+h1 {
+    margin-bottom: 20px;        /* Espaçamento abaixo do título */
+}
+
+
+.btn-menu {
+    background-color: red;
+    color: white;
+    border: none;
+    width: 90%; /* Largura responsiva */
+    max-width: 300px; /* Largura máxima */
+    height: 80px; /* Altura fixa */
+    font-size: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px; /* Espaçamento entre os botões */
+}
+
+.btn-menu:hover {
+    background-color: darkred; /* Efeito hover */
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 36px; /* Ajuste o tamanho do texto em telas menores */
+    }
+
+    .btn-menu {
+        height: 70px; /* Ajuste a altura do botão em telas menores */
+        font-size: 20px; /* Ajuste o tamanho do texto em telas menores */
+    }
+}

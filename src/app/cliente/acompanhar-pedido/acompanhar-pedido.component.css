@@ -1,0 +1,73 @@
+.acompanhar-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3f0f0;
+  padding: 20px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.header img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.pedido {
+  background-color: #ff0000;
+  color: #ffffff;
+  font-size: 24px;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #000000;
+  margin-bottom: 20px;
+}
+
+.status-container {
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  max-width: 300px;
+
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+
+}
+
+.status-dot {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.status-dot.enviado {
+  background-color: red;
+}
+
+.status-item span {
+  font-size: 13px;
+
+}
+
+.status-linha {
+  height: 100px;
+  width: 2px;
+  background-color: #ccc;
+  margin-left: 6.5px;
+}
+
+

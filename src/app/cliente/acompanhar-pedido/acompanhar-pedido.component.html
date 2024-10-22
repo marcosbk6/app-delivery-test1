@@ -1,0 +1,36 @@
+<div class="acompanhar-container">
+  <div class="header">
+    <img src="images/seta-voltar.png" alt="seta voltar" (click)="voltarPaginaAnterior()">
+    <img src="images/casa-menu.png" alt="casinha menu">
+  </div>
+
+  <div class="pedido">
+    Acompanhar Pedido
+  </div>
+
+  <div class="status-container">
+    <div class="status-item">
+      <span class="status-dot enviado"></span>
+      <span>Enviado para a cozinha</span>
+    </div>
+    <div class="status-linha"></div>
+    <div class="status-item">
+      <span class="status-dot"></span>
+      <span>Pedido confirmado/Em preparo</span>
+    </div>
+    <div class="status-linha"></div>
+    <div class="status-item">
+      <span class="status-dot"></span>
+      <span>Saiu para entrega</span>
+    </div>
+    <div class="status-linha"></div>
+    <div class="status-item">
+      <span class="status-dot"></span>
+      <span>Entregue</span>
+    </div>
+  </div>
+  <button (click)="finalizarEntrega()">Finalizar Entrega</button>
+
+</div>
+
+

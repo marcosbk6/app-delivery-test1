@@ -1,0 +1,115 @@
+
+.tela {
+  height: 100vh;
+  background-color: #f3f0f0;
+  padding: 20px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.header img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.botao_produto {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+
+}
+
+.botao_produto button {
+  width: 100%;
+  background-color: #ccc;
+  border: 1px solid;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.botao_produto button.active {
+  background-color: #ff0000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  font-weight: bold;
+}
+
+.botao_adicionar {
+  background-color: #008000;
+  color: #ffffff;
+  border: none;
+  padding: 8px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.botao_adicionar:hover {
+  background-color: #28a745;
+}
+
+@media (min-width: 768px) {
+  .cardapio-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas para telas pequenas */
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardapio-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas para telas grandes */
+  }
+}
+
+.img-produto {
+  width: 100%;
+  height: 150px; /* Altura fixa para uniformizar as imagens */
+  object-fit: cover; /* Ajuste para preencher sem distorção */
+  border-radius: 8px;;
+}
+
+.prato {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.cardapio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 4 colunas */
+  gap: px;
+  padding: 20px; /* Espaço entre os pratos */
+}
+
+.prato {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.carrinho {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.carrinho img {
+  width: 40px;
+  height: 40px;
+}
+
+
+

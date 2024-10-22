@@ -1,0 +1,41 @@
+<div class="tela">
+  <div class="header">
+    <img src="images/seta-voltar.png" alt="seta voltar" (click)="voltarPaginaAnterior()">
+    <img src="images/casa-menu.png" alt="casinha menu">
+  </div>
+  <div class="botao_produto">
+    <button [class.active]="selectedTab === 'hamburguer'" (click)="selectedTab = 'hamburguer'">Hamburguer</button>
+    <button [class.active]="selectedTab === 'bebidas'" (click)="selectedTab = 'bebidas'">Bebidas</button>
+    <button [class.active]="selectedTab === 'sobremesas'" (click)="selectedTab = 'sobremesas'">Sobremesas</button>
+  </div>
+
+  <div class="cardapio-container">
+    <div class="prato" *ngFor="let prato of pratos">
+      <img class= "img-produto" [src]="getImagemUrl(prato.imagemUrl)"  alt="{{ prato.nome }}">
+      <h3>{{ prato.nome }}</h3>
+      <p>R$ {{ prato.preco | currency }}</p>
+      <button class="botao_adicionar" (click)="adicionarProduto(prato.nome)">Adicionar ao carrinho</button>
+    </div>
+
+    <div *ngIf="selectedTab === 'bebidas'" class="card">
+      <img src="images/bebidas.png" alt="Bebida" class="imagem">
+      <h3 class="nome_produto">Coca-cola</h3>
+      <p class="preco">R$ 8,00</p>
+      <button class="botao_adicionar" (click)="adicionarProduto('Coca-cola')">Adicionar</button>
+    </div>
+
+    <div *ngIf="selectedTab === 'sobremesas'" class="card">
+      <img src="images/sobremesa.png" alt="Sobremesa" class="imagem">
+      <h3 class="nome_produto">Pudim</h3>
+      <p class="preco">R$ 12,50</p>
+      <button class="botao_adicionar" (click)="adicionarProduto('Sorvete')">Adicionar</button>
+    </div>
+  </div>
+
+
+  <div class="carrinho" (click)="irParaPedido()">
+    <img src="images/carrinho.png" alt="Carrinho de compras">
+    <span class="cart-count">{{ getQuantidadeCarrinho() }}</span>
+  </div>
+
+</div>
