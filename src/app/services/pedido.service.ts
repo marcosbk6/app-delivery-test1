@@ -23,8 +23,10 @@ export class PedidoService {
   adicionarPrato(prato: Prato): void {
     this.pratosSelecionados.push(prato);
   }
+  
 
   getPratos(): Prato[] {
+    console.log("Retornando pratos:", this.pratosSelecionados);
     return this.pratosSelecionados;
   }
 

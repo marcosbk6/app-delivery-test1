@@ -13,11 +13,12 @@ import { PratoService } from '../../services/prato.service';
   imports: [CommonModule, HttpClientModule],
   templateUrl: './pedido.component.html',
   styleUrl: './pedido.component.css',
-  providers: [PratoService, PedidoService]
+  providers: [PratoService]
 })
 export class PedidoComponent implements OnInit {
 
   pratos: Prato [] = [];
+  total: number =0;
 
   constructor(
     private router: Router, 
@@ -26,6 +27,7 @@ export class PedidoComponent implements OnInit {
 
   ngOnInit(): void {
     this.pratos = this.pedidoService.getPratos(); // Obter pratos do pedido
+    this.calcularTotal();
     console.log('Pratos no pedido:', this.pratos); // Verifique a lista aqui
   }
 

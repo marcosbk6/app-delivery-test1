@@ -13,7 +13,7 @@ import { Prato } from '../../models/prato.model';
   imports: [CommonModule, HttpClientModule],
   templateUrl: './cardapio.component.html',
   styleUrls: ['./cardapio.component.css'],
-  providers: [PratoService, PedidoService]
+  providers: [PratoService]
 })
 export class CardapioComponent implements OnInit {
   selectedTab: string = 'principais';
