@@ -16,7 +16,7 @@
         <img class="img-produto" [src]="getImagemUrl(prato.imagemUrl)" alt="{{ prato.nome }}">
         <h3>{{ prato.nome }}</h3>
         <p>R$ {{ prato.preco | currency }}</p>
-        <button class="botao_adicionar" (click)="adicionarProduto(prato.nome)">Adicionar ao carrinho</button>
+        <button class="botao_adicionar" (click)="adicionarProduto(prato)">Adicionar ao carrinho</button>
       </div>
     </ng-container>
 
@@ -26,7 +26,7 @@
         <img class="img-produto" [src]="getImagemUrl(prato.imagemUrl)" alt="{{ prato.nome }}">
         <h3>{{ prato.nome }}</h3>
         <p>R$ {{ prato.preco | currency }}</p>
-        <button class="botao_adicionar" (click)="adicionarProduto(prato.nome)">Adicionar ao carrinho</button>
+        <button class="botao_adicionar" (click)="adicionarProduto(prato)">Adicionar ao carrinho</button>
       </div>
     </ng-container>
 
@@ -36,7 +36,7 @@
         <img class="img-produto" [src]="getImagemUrl(prato.imagemUrl)" alt="{{ prato.nome }}">
         <h3>{{ prato.nome }}</h3>
         <p>R$ {{ prato.preco | currency }}</p>
-        <button class="botao_adicionar" (click)="adicionarProduto(prato.nome)">Adicionar ao carrinho</button>
+        <button class="botao_adicionar" (click)="adicionarProduto(prato)">Adicionar ao carrinho</button>
       </div>
     </ng-container>
   </div>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Prato } from '../models/prato.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class PratoService {
   constructor(private http: HttpClient) {}
 
   // Método para obter pratos do backend
-  getPratos(): Observable<any[]> {
-    return this.http.get<any[]>('http://localhost:8080/api/pratos');
+  getPratos(): Observable<Prato[]> {
+    return this.http.get<Prato[]>(this.apiUrl);
   }
 }

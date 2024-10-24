@@ -1,19 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { Prato } from '../../models/prato.model';
+import { PedidoService } from '../../services/pedido.service';
+import { HttpClientModule } from '@angular/common/http';
+import { PratoService } from '../../services/prato.service';
 
 @Component({
   selector: 'app-pedido',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule],
   templateUrl: './pedido.component.html',
-  styleUrl: './pedido.component.css'
+  styleUrl: './pedido.component.css',
+  providers: [PratoService, PedidoService]
 })
-export class PedidoComponent {
+export class PedidoComponent implements OnInit {
 
-  constructor(private router: Router, private location: Location) {}
+  pratos: Prato [] = [];
 
+  constructor(
+    private router: Router, 
+    private location: Location,
+    private pedidoService: PedidoService) {}
+
+  ngOnInit(): void {
+    this.pratos = this.pedidoService.getPratos(); // Obter pratos do pedido
+    console.log('Pratos no pedido:', this.pratos); // Verifique a lista aqui
+  }
+
+  calcularTotal(): number {
+    return this.pratos.reduce((total, prato) => total + prato.preco, 0);
+}
+
+    
 
   finalizarPedido() {
     this.router.navigate(['/acompanhar-pedido']);

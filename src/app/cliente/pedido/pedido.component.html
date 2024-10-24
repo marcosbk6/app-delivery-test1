@@ -4,17 +4,20 @@
     <img src="images/casa-menu.png" alt="casinha menu">
   </div>
   <div class="pedido">
-     Pedido
+    Pedido
   </div>
-  <div class="pedido-detalhes">
-    <p>1x Hamburguer Clássico: R$ 15,99</p>
-    <p>1x Refrigerante: R$ 8,00</p>
-    <p>1x Pudim: R$ 12,50</p>
-    <p><strong>Total: R$ 36,49</strong></p>
+  <h2>Seu Pedido</h2>
+  <div *ngFor="let prato of pratos">
+      <h3>{{ prato.nome }}</h3>
+      <p>Preço: {{ prato.preco | currency }}</p>
   </div>
+  
+  <div>
+      <strong>Total: {{ calcularTotal() | currency }}</strong>
+  </div>
+
   <div class="pedido-botoes">
     <button class="botao_finalizar" (click)="finalizarPedido()">Finalizar Pedido</button>
     <button class="botao_cancelar" (click)="cancelarPedido()">Cancelar Pedido</button>
   </div>
 </div>
-
