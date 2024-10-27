@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component'; // inicio
+import { HomeComponent } from './gestor/home/home.component'; // inicio
 import { MenuComponent } from './menu/menu.component';
-import { GestaoComponent } from './gestao/gestao.component';
-import { AdicionarPratoComponent } from './adicionar-prato/adicionar-prato.component';
+import { GestaoComponent } from './gestor/gestao/gestao.component';
+import { AdicionarPratoComponent } from './gestor/adicionar-prato/adicionar-prato.component';
 import { CardapioComponent } from './cliente/cardapio/cardapio.component';
 import { PedidoComponent } from './cliente/pedido/pedido.component';
 

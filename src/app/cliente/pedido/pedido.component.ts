@@ -43,7 +43,8 @@ export class PedidoComponent implements OnInit {
 
 
   cancelarPedido() {
-    this.router.navigate(['/']);
+    this.pedidoService.limparPedido(); // Limpa o pedido no serviço
+    this.pratos = [];
   }
 
   voltarPaginaAnterior() {
