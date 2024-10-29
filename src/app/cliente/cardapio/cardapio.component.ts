@@ -18,13 +18,13 @@ import { Prato } from '../../models/prato.model';
 export class CardapioComponent implements OnInit {
   selectedTab: string = 'principais';
   pratos: any[] = [];
-  pratosPrincipais: any[] = []; 
-  pratosBebidas: any[] = []; 
-  pratosSobremesas: any[] = []; 
+  pratosPrincipais: any[] = [];
+  pratosBebidas: any[] = [];
+  pratosSobremesas: any[] = [];
 
   constructor(
-    private pratoService: PratoService, 
-    private router: Router, 
+    private pratoService: PratoService,
+    private router: Router,
     private location: Location,
     private pedidoService: PedidoService
   ) {}
@@ -45,11 +45,11 @@ export class CardapioComponent implements OnInit {
       }
     );
   }
-  
+
 
   adicionarProduto(prato: Prato) {
     if (prato && prato.nome) { // Verifica se o prato é válido
-        this.pedidoService.adicionarPrato(prato); 
+        this.pedidoService.adicionarPrato(prato);
         console.log(`${prato.nome} adicionado ao carrinho.`);
     } else {
         console.error('Prato inválido ou sem nome:', prato);
@@ -73,7 +73,11 @@ export class CardapioComponent implements OnInit {
   getImagemUrl(imagem: string): string {
     return imagem;
   }
-  
+
+  voltarParaMenu() {
+    this.router.navigate(['/menu']);
+  }
+
 }
 
 

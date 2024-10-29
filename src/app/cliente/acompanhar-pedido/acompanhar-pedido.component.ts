@@ -23,4 +23,8 @@ export class AcompanharPedidoComponent {
 
   }
 
+  voltarParaMenu() {
+    this.router.navigate(['/menu']);
+  }
+
 }

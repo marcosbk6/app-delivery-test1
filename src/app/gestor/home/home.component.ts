@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +10,21 @@ import { Router } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-constructor(private router: Router){}
+constructor(
+  private router: Router,
+  private location: Location
+){}
 
   onEnterClick() {
     console.log('Botão Entrar clicado');
-    this.router.navigate(['/menu']);  // Altere para a rota do MenuComponent
+    this.router.navigate(['/gestao']);  // Altere para a rota do MenuComponent
   }
+
+  voltarPaginaAnterior() {
+    this.location.back();
+  }
+  voltarParaMenu() {
+    this.router.navigate(['/menu']);
+  }
+
 }

@@ -5,13 +5,26 @@
   height: 100vh;
   text-align: center;
   padding: 20px;
-  background-color: #f3f0f0;
+  background-color: #d7d6d6;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.header img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 .titulo {
   color: #ff0000;
   font-size: 64px;
-  margin: 80px 0;
+  margin: 60px 0;
 }
 
 .subtitulo {
@@ -23,7 +36,7 @@
 .descricao {
   font-size: 16px;
   color: #000000;
-  margin: 100px 0;
+  margin: 80px 0;
 
 }
 
@@ -32,13 +45,27 @@
   color: #ffffff;
   border: none;
   border-radius: 10px;
-  padding: 15px 40px;
+  padding: 13px 70px;
   font-size: 36px;
+  margin-bottom: 10px;
   cursor: pointer;
+}
 
+.botao2 {
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 17px 10px;
+  font-size: 32px;
+  cursor: pointer;
 }
 
 .botao:hover {
+  background-color: #ff3333;
+}
+
+.botao2:hover {
   background-color: #ff3333;
 }
 
@@ -58,7 +85,12 @@
   }
 
   .botao {
-    font-size: 36px;
-    padding: 10px 30px;
+    font-size: 30px;
+    padding: 10px 45px;
   }
+  .botao2 {
+  font-size: 24px;
+  padding: 15px 7px;
+  }
+
 }

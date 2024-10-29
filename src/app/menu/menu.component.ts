@@ -10,13 +10,13 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent {
   constructor(private router: Router) {}
-  
+
   onButtonClick(role: string){
     console.log(`${role} button clicked`);
     if (role === 'Gestor') {
-      this.router.navigate(['/gestao']);
+      this.router.navigate(['/home']);
     } else if ( role=== 'Cliente') {
-      this.router.navigate(['/cardapio']);
+      this.router.navigate(['/tela-inicio']);
       // Lógica para outros botões
     }
   }

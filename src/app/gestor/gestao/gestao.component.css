@@ -1,49 +1,71 @@
 .gestao-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  background-color: #d7d6d6;
 }
 
-.gestao-icon {
-    position: absolute;
-    top: 30px; 
-    left: 30px; 
-    font-size: 44px; 
-    color: #000; 
-    cursor: pointer;
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.header img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 h1 {
-    font-size: 48px;
-    color: red;
-    margin-bottom: 20px;
+  font-size: 48px;
+  color: #ff0000;
+  margin-top: 20px;
 }
 
 p {
-    font-size: 24px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 100px;
+  margin-bottom: 150px;
 }
 
 .btn-gestao {
-    background-color: red; /* Cor do botão */
-    color: white;
-    border: none;
-    width: 90%;
-    max-width: 300px;
-    height: 100px;
-    font-size: 40px;
-    border-radius: 30px;
-    margin: 10px; /* Espaçamento entre os botões */
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  background-color: #ff0000; /* Cor do botão */
+  color: #ffffff;
+  border: none;
+  padding: 10px 60px;
+  font-size: 36px;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.btn-gestao2 {
+  background-color: #ff0000;
+ color: #ffffff;
+ border: none;
+ padding: 10px 20px;
+ font-size: 36px;
+ border-radius: 15px;
+ cursor: pointer;
+ display: flex;
+ margin-top: 50px;
+ align-items: center;
 }
 
 .btn-gestao:hover {
-    background-color: darkgreen; /* Cor do botão ao passar o mouse */
+    background-color: #006400; /* Cor do botão ao passar o mouse */
+}
+.btn-gestao2:hover {
+  background-color: #006400;
 }
 
 /* Responsividade */
@@ -53,7 +75,12 @@ p {
     }
 
     .btn-gestao {
-        height: 70px;
-        font-size: 20px;
+        padding: 10px 45px;
+        font-size: 30px;
+    }
+
+    .btn-gestao2 {
+      padding: 10px 20px;
+      font-size: 28px;
     }
 }

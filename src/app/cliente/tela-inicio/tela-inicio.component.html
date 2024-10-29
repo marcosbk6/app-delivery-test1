@@ -1,8 +1,13 @@
 <div class="container">
+  <div class="header">
+    <img src="images/seta-voltar.png" alt="seta voltar" (click)="voltarPaginaAnterior()">
+  </div>
+
   <h1 class="titulo">Delivery</h1>
   <h2 class="subtitulo">Bem Vindos</h2>
   <p class="descricao">Peça seu lanche favorito <br> do conforto da sua casa</p>
-  <button [routerLink]="['/menu']" class="botao">Peça Aqui</button>
+  <button [routerLink]="['/cardapio']" class="botao">Peça Aqui</button>
+  <button [routerLink]="['/acompanhar-pedido']" class="botao2">Acompanhar Pedido</button>
 
 </div>
 

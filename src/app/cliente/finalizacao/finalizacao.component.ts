@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-finalizacao',
@@ -12,9 +13,15 @@ import { Location } from '@angular/common';
 export class FinalizacaoComponent {
 
 
-  constructor(private location: Location) {}
+  constructor(
+    private router: Router,
+    private location: Location) {}
 
   voltarPaginaAnterior() {
     this.location.back();
+  }
+
+  voltarParaMenu() {
+    this.router.navigate(['/menu']);
   }
 }

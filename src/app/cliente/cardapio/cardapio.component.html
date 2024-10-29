@@ -1,7 +1,7 @@
 <div class="tela">
   <div class="header">
     <img src="images/seta-voltar.png" alt="seta voltar" (click)="voltarPaginaAnterior()">
-    <img src="images/casa-menu.png" alt="casinha menu">
+    <img src="images/casa-menu.png" alt="casinha menu"  (click)="voltarParaMenu()">
   </div>
   <div class="botao_produto">
     <button [class.active]="selectedTab === 'principais'" (click)="selectedTab = 'principais'">Pratos</button>

@@ -21,7 +21,7 @@ export class PedidoComponent implements OnInit {
   total: number =0;
 
   constructor(
-    private router: Router, 
+    private router: Router,
     private location: Location,
     private pedidoService: PedidoService) {}
 
@@ -35,7 +35,7 @@ export class PedidoComponent implements OnInit {
     return this.pratos.reduce((total, prato) => total + prato.preco, 0);
 }
 
-    
+
 
   finalizarPedido() {
     this.router.navigate(['/acompanhar-pedido']);
@@ -50,5 +50,10 @@ export class PedidoComponent implements OnInit {
   voltarPaginaAnterior() {
     this.location.back();
   }
+
+  voltarParaMenu() {
+    this.router.navigate(['/menu']);
+  }
+
 
 }

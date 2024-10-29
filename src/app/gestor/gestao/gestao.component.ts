@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-gestao',
@@ -10,7 +11,15 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class GestaoComponent {
 
-  constructor(private router: Router) {}
+
+  constructor(private router: Router, private location: Location) {}
+
+   voltarPaginaAnterior() {
+   this.location.back();
+ }
+ voltarParaMenu() {
+   this.router.navigate(['/menu']);
+ }
 
   goToMenu() {
     this.router.navigate(['/menu']); // substitua '/menu' pela rota correta do menu no seu aplicativo

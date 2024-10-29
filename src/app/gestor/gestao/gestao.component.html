@@ -1,5 +1,8 @@
 <div class="gestao-container">
-    <i class="fa-solid fa-rotate-left fa-3x gestao-icon" (click)="goToMenu()"></i>
+  <div class="header">
+  <img src="images/seta-voltar.png" alt="seta voltar" (click)="voltarPaginaAnterior()">
+  <img src="images/casa-menu.png" alt="casinha menu"  (click)="voltarParaMenu()">
+  </div>
     <h1>Gestão</h1>
     <p>Bem-vindo à tela de Gestão!</p>
     <button (click)="onAddDishClick()" class="btn-gestao">Adicionar Prato</button>

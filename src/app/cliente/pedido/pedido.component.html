@@ -1,7 +1,7 @@
 <div class="pedido-container">
   <div class="header">
     <img src="images/seta-voltar.png" alt="seta voltar" (click)="voltarPaginaAnterior()">
-    <img src="images/casa-menu.png" alt="casinha menu">
+    <img src="images/casa-menu.png" alt="casinha menu"  (click)="voltarParaMenu()">
   </div>
   <div class="pedido">
     Pedido
@@ -11,7 +11,7 @@
       <h3>{{ prato.nome }}</h3>
       <p>Preço: {{ prato.preco | currency }}</p>
   </div>
-  
+
   <div>
       <strong>Total: {{ calcularTotal() | currency }}</strong>
   </div>
