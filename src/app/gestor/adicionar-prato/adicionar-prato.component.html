@@ -1,9 +1,14 @@
 <div class="adicionar-prato-container">
+  <div class="header">
+    <img src="images/seta-voltar.png" alt="seta voltar" (click)="voltarPaginaAnterior()">
+    <img src="images/casa-menu.png" alt="casinha menu"  (click)="voltarParaMenu()">
+  </div>
+
     <h1>Adicionar Novo Prato</h1>
     <form (ngSubmit)="onSubmit()">
         <label for="nome-prato">Nome do Prato:</label>
         <input type="text" id="nome-prato" [(ngModel)]="nomePrato" name="nomePrato" required>
-        
+
         <label for="preco">Preço:</label>
         <input type="number" id="preco" [(ngModel)]="preco" name="preco" required>
 
@@ -18,7 +23,7 @@
             <option value="bebidas">bebidas</option>
             <option value="sobremesas">sobremesas</option>
         </select>
-        
+
         <button type="submit" class="btn-adicionar">Adicionar Prato</button>
     </form>
 </div>

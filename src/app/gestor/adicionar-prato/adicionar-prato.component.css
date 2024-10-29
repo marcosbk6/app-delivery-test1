@@ -1,30 +1,47 @@
 .adicionar-prato-container {
-    padding: 20px;
+  padding: 20px;
+  background-color: #d7d6d6;
+  height: 100vh;
 }
 
+.header {
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+}
+.header img {
+width: 30px;
+height: 30px;
+cursor: pointer;
+}
+
+
 .adicionar-prato-container h1 {
-    text-align: center;
+  text-align: center;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 input, textarea, button {
-    padding: 10px;
-    font-size: 16px;
+  padding: 10px;
+  font-size: 16px;
 }
 
 .btn-adicionar {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .btn-adicionar:hover {
-    background-color: #218838;
+  background-color: #218838;
 }
+

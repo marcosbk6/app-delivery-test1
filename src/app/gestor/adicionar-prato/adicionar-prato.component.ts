@@ -3,7 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient , HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { environment } from '../../../environments/environment';
-
+import { Router, } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-adicionar-prato',
@@ -24,7 +25,7 @@ export class AdicionarPratoComponent {
   pratosPrincipais: any[] = []; // Adicione esta linha
   pratosBebidas: any[] = []; // Adicione esta linha
   pratosSobremesas: any[] = []; // Adicione esta linha
-  
+
 
   onImageSelected(event: Event): void {
     const fileInput = event.target as HTMLInputElement;
@@ -47,7 +48,10 @@ export class AdicionarPratoComponent {
     }
   }
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private location: Location) {}
 
   onSubmit() {
     if (!this.nomePrato || this.preco === null || !this.imagemPreview) {
@@ -93,7 +97,7 @@ private getPratos() {
       }
     );
   }
-    
+
     private resetForm() {
       this.nomePrato = '';
       this.preco = null;
@@ -101,5 +105,10 @@ private getPratos() {
       this.categoria = 'principal';
     }
 
-    
+    voltarPaginaAnterior() {
+      this.location.back();
+    }
+    voltarParaMenu() {
+      this.router.navigate(['/menu']);
+    }
 }
