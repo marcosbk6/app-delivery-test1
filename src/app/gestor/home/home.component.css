@@ -23,13 +23,13 @@
 h1 {
 color: #ff0000;
 font-size: 64px;
-margin: 60px 0;
+margin: 70px 0;
 }
 
 h2 {
 color: #000000;
 font-size: 40px;
-margin-top: 90px;
+margin-top: 120px;
 }
 
 p {
@@ -45,7 +45,7 @@ border: none;
 border-radius: 10px;
 padding: 13px 70px;
 font-size: 36px;
-margin-top: 150px;
+margin-top: 200px;
 cursor: pointer;
 
 }

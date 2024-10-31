@@ -8,16 +8,15 @@
 }
 
 .header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-left: auto;
+  margin-bottom: 20px;
 }
 .header img {
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
+
 
 .mensagem_um {
   background-color: #ff0000;

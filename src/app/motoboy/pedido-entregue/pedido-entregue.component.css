@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #d7d6d6;
+  padding: 20px;
+
+ }
+
+ .header {
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+.header img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+  h1 {
+    background-color: #ff0000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 100px;
+  }
+
+  h2 {
+
+    color: #ff0000;
+    text-align: center;
+    padding: 20px;
+    margin-top: 300px;
+    font-size: 48px;
+  }
+
+

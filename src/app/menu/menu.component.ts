@@ -15,9 +15,15 @@ export class MenuComponent {
     console.log(`${role} button clicked`);
     if (role === 'Gestor') {
       this.router.navigate(['/home']);
-    } else if ( role=== 'Cliente') {
+    }
+      else if ( role=== 'Cliente') {
       this.router.navigate(['/tela-inicio']);
-      // Lógica para outros botões
+    }
+      else if ( role === 'Cozinha') {
+        this.router.navigate(['/inicio-c']);
+    }
+      else if ( role === 'Motoboy') {
+      this.router.navigate(['/tela-inicial']);
     }
   }
 }

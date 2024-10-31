@@ -62,10 +62,10 @@ p {
 }
 
 .btn-gestao:hover {
-    background-color: #006400; /* Cor do botão ao passar o mouse */
+  background-color: #8b0000; /* Cor do botão ao passar o mouse */
 }
 .btn-gestao2:hover {
-  background-color: #006400;
+  background-color: #8b0000;
 }
 
 /* Responsividade */

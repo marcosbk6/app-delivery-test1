@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="header">
+    <img src="images/seta-voltar.png" alt="seta voltar" (click)="voltarPaginaAnterior()">
+    <img src="images/casa-menu.png" alt="casinha menu"  (click)="voltarParaMenu()">
+  </div>
+
+  <div class="restaurante">
+    Restaurante
+  </div>
+
+  <div class="order-info">
+    <p><strong>Pedido: #0001</strong></p>
+    <p>1x Hambúrguer Clássico: R$ 15,99</p>
+    <p>1x Refrigerante: R$ 8,00</p>
+    <p>1x Pudim: R$ 12,50</p>
+    <p><strong>Total: R$ 36,49</strong></p>
+    <h2 class="endereco">Endereço de entrega: **********</h2>
+    <h2>Cliente: *******</h2>
+  </div>
+
+  <div>
+    <button (click)="RetirarPedido()" class="botao">Retirar Pedido</button>
+  </div>
+</div>

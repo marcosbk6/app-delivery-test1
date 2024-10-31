@@ -1,0 +1,73 @@
+
+  .notificacao-retirados {
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 60px;
+    border: 1px solid #000000;
+    text-align: center;
+    width: 100%;
+  }
+
+  .header {
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
+  .header img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    background-color: #d7d6d6;
+    align-items: center;
+  }
+
+  .menssagem {
+    font-size: 24px;
+    margin: 20px 0;
+    margin-top: 220px;
+    align-items: center;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #ff0000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .icon::before {
+    content: '✓';
+    color: #ff0000;
+    font-size: 24px;
+  }
+
+  .botao {
+      border: none;
+      padding: 10px 30px;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      background-color: red;
+      color: #ffffff;
+    }
+
+    .button:hover {
+      background-color: #8b0000;
+    }

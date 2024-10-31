@@ -1,0 +1,25 @@
+<div class="tela">
+  <div class="header">
+    <img src="images/seta-voltar.png" alt="seta voltar" (click)="voltarPaginaAnterior()">
+    <img src="images/casa-menu.png" alt="casinha menu"  (click)="voltarParaMenu()">
+  </div>
+
+  <div class="entregas">
+    Entregas
+  </div>
+    <h1>Aceitar Entrega?</h1>
+
+    <div class="info">
+      <p><strong>Pedido: #0001</strong></p>
+      <p>Endereço de retirada: **********</p>
+      <p>Endereço da entrega: **********</p>
+    </div>
+
+    <div class="botoes">
+      <button (click)="AceitarPedido()" class="aceitar">Aceitar Pedido</button>
+      <button (click)="RecusarPedido()" class="recusar">Recusar Pedido</button>
+
+    </div>
+  </div>
+
+

@@ -24,19 +24,19 @@
 .titulo {
   color: #ff0000;
   font-size: 64px;
-  margin: 60px 0;
+  margin: 50px 0;
 }
 
 .subtitulo {
   color: #000000;
   font-size: 40px;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 .descricao {
   font-size: 16px;
   color: #000000;
-  margin: 80px 0;
+  margin: 100px 0;
 
 }
 
@@ -47,6 +47,7 @@
   border-radius: 10px;
   padding: 13px 70px;
   font-size: 36px;
+  margin-top: 40px;
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -62,11 +63,11 @@
 }
 
 .botao:hover {
-  background-color: #ff3333;
+  background-color: #8b0000;
 }
 
 .botao2:hover {
-  background-color: #ff3333;
+  background-color: #8b0000;
 }
 
 
